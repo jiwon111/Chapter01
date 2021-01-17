@@ -6,11 +6,12 @@
     <script>
         //이벤트 결정
         $(document).ready(function(){
-            //문서 객체 추가 함수
+            
+            //문서 객체 추가 함수 만들기
             var appendDocument = function(){
                 for (var i=0;i<20;i++){
                     //문서 객체 생성
-                    $('<h1>Infinity Scroll</h1>').appendTo('body');
+                    $('<h1>Infinity Scroll</h1>').appendTo('body');//바디에 붙임
                 }
             };
 
@@ -20,6 +21,7 @@
             $(window).scroll(function(){
                 //변수 선언
                 var scrollHeight = $(window).scrollTop() + $(window).height();
+                //전체 문서 높이 = 스크롤 높이 + 브라우저 창의 높이
                 var documentHeight = $(document).height();
 
                 //길이 검사
